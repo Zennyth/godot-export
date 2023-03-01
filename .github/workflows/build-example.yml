@@ -36,4 +36,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           generateReleaseNotes: true
           tag: v${{ steps.tag_version.outputs.TAG_VERSION }}
-          artifacts: ${{ steps.export.outputs.archive_directory }}/* # Added "/*" at the end is glob pattern match for this action
+          artifacts: "${{ steps.export.outputs.archive_directory }}/win.zip" # Added "/*" at the end is glob pattern match for this action
